@@ -25,8 +25,15 @@ Route::get('/products', [ProductsController::class, 'index']);
 //     [ProductsController::class, 'show'])->where('id', '[0-9]+');
 
 //Pattern is string
-Route::get('products/{name}',
-    [ProductsController::class, 'show'])->where('name', '[a-zA-Z]+');
+// Route::get('products/{name}',
+//     [ProductsController::class, 'show'])->where('name', '[a-zA-Z]+');
+
+//Pattern is string / integer
+Route::get('products/{name}/{id}',
+    [ProductsController::class, 'show'])->where([
+        'name' => '[a-zA-Z]+',
+        'id' => '[0-9]+'
+    ]);
 
 Route::get('/products/about', [ProductsController::class, 'about']);
 Route::get('/products/about/back', [ProductsController::class, 'about_back']);

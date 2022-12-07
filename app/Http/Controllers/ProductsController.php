@@ -20,8 +20,15 @@ class ProductsController extends Controller
         ]);
     }
 
-    public function show ($id){
-        return $id;
+    public function show ($name){
+        $data = [
+            'iphone' => "iPhone",
+            'xiome' => "Xiome",
+            'samesong' => "Samsong",
+        ];
+        return view('products.index', [
+            'products' => $data[$name]
+        ]);
     }
 
     public function about(){

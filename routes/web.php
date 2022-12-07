@@ -26,3 +26,8 @@ Route::get('/docs', function () {
 Route::get('/users', function () {
     return 'welcome to users page';
 });
+
+// Route that sends users Array
+Route::get('/users', function(){
+    return ['PHP', 'HTML', 'Laravel', 'css'];
+});

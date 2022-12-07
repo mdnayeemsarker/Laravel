@@ -7,7 +7,9 @@ use Illuminate\Http\Request;
 class ProductsController extends Controller
 {
     public function index(){
-        return view('products.index');
+        $title = "Laravel Deep Learning Project";
+        $des = "This is an Laravel deep learning program.";
+        return view('products.index', compact('title', 'des'));
     }
     
     public function about(){

@@ -7,39 +7,8 @@ use Illuminate\Http\Request;
 class ProductsController extends Controller
 {
     public function index(){
-
-        $data = [
-            'p1' => "iPhone",
-            'p2' => "Xiome",
-            'p3' => "Samsong",
-        ];
-
         // Data parching Directly in view 
-        return view('products.index', [
-            'data' => $data
-        ]);
-    }
-
-    // public function show ($id){
-    //     $data = [
-    //         '01' => "iPhone",
-    //         '101' => "Xiome",
-    //         '09' => "Samsong",
-    //     ];
-    //     return view('products.index', [
-    //         'products' => $data[$id] ?? 'Product ' . $id . " dose not exist."
-    //     ]);
-    // }
-    
-    public function show ($name){
-        $data = [
-            'iphone' => "iPhone",
-            'xiome' => "Xiome",
-            'samsong' => "Samsong",
-        ];
-        return view('products.index', [
-            'products' => $data[$name] ?? 'Product ' . $name . " dose not exist."
-        ]);
+        return view('products.index');
     }
 
     public function about(){

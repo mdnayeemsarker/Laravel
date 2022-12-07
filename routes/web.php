@@ -18,22 +18,9 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/products', [ProductsController::class, 'index']);
+Route::get('/products', [ProductsController::class, 'index'])->name('pro');
+Route::get('/name', [ProductsController::class, 'index'])->name('pro_name');
 
-//Pattern is integer
-// Route::get('/products/{id}', 
-//     [ProductsController::class, 'show'])->where('id', '[0-9]+');
-
-//Pattern is string
-// Route::get('products/{name}',
-//     [ProductsController::class, 'show'])->where('name', '[a-zA-Z]+');
-
-//Pattern is string / integer
-Route::get('products/{name}/{id}',
-    [ProductsController::class, 'show'])->where([
-        'name' => '[a-zA-Z]+',
-        'id' => '[0-9]+'
-    ]);
 
 Route::get('/products/about', [ProductsController::class, 'about']);
 Route::get('/products/about/back', [ProductsController::class, 'about_back']);

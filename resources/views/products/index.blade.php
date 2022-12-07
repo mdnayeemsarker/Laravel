@@ -7,6 +7,8 @@
 </head>
 <body>
     <h1>This is our products page</h1>
-    <p>{{ $title }}</p>
+    @foreach ($data as $item)
+        <p>{{ $item }}</p>
+    @endforeach
 </body>
 </html>

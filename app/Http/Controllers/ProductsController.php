@@ -14,7 +14,14 @@ class ProductsController extends Controller
         // return view('products.index', compact('title', 'des'));
 
         // with methode
-        return view('products.index')->with('title', $title);
+
+        $data = [
+            'p1' => "iPhone",
+            'p2' => "Xiome",
+            'p3' => "Samsong",
+        ];
+
+        return view('products.index')->with('data', $data);
 
     }
     

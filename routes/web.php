@@ -17,7 +17,11 @@ Route::get('/', function () {
     return view('index');
 });
 
-//Route
+//Route docs
 Route::get('/docs', function () {
+    return view('frontend.item-details');
+});
+
+Route::get('/users', function () {
     return view('frontend.item-details');
 });

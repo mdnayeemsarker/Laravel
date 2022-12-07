@@ -19,10 +19,9 @@
 @section('user')
 <div class="p-6">
     <div class="ml-4 text-lg leading-7 font-semibold"><a href='/users' class="underline text-gray-900 dark:text-white">Users</a></div>
-
     <div class="ml-12">
         <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm justify-content-start">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Lorem ipsum navigation dolor sit amet consectetur adipisicing elit.
         </div>
     </div>
 </div>

@@ -27,7 +27,7 @@ class ProductsController extends Controller
             'samesong' => "Samsong",
         ];
         return view('products.index', [
-            'products' => $data[$name]
+            'products' => $data[$name] ?? 'Product ' . $name . " dose not exist."
         ]);
     }
 

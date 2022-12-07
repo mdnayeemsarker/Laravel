@@ -7,13 +7,6 @@ use Illuminate\Http\Request;
 class ProductsController extends Controller
 {
     public function index(){
-        $title = "Laravel Deep Learning Project";
-        $des = "This is an Laravel deep learning program.";
-
-        //Compact methode
-        // return view('products.index', compact('title', 'des'));
-
-        // with methode
 
         $data = [
             'p1' => "iPhone",
@@ -21,15 +14,16 @@ class ProductsController extends Controller
             'p3' => "Samsong",
         ];
 
-        // return view('products.index')->with('data', $data);
-
         // Data parching Directly in view 
         return view('products.index', [
             'data' => $data
         ]);
-
     }
-    
+
+    public function show ($id){
+        return $id;
+    }
+
     public function about(){
         return 'About Us Page';
     }

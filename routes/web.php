@@ -31,3 +31,12 @@ Route::get('/users', function () {
 Route::get('/users', function(){
     return ['PHP', 'HTML', 'Laravel', 'css'];
 });
+
+
+// Route that sends Json Object
+Route::get('/users', function () {
+    return response()->json([
+        'name' => 'Nayeem',
+        'email' => 'nayeemasha@gmail.com'
+    ]);
+});

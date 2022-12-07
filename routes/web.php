@@ -17,11 +17,12 @@ Route::get('/', function () {
     return view('index');
 });
 
-//Route docs
+//Route that sends back a view
 Route::get('/docs', function () {
     return view('frontend.item-details');
 });
 
+// Route that sends users - string
 Route::get('/users', function () {
-    return view('frontend.item-details');
+    return 'welcome to users page';
 });

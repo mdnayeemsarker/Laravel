@@ -20,26 +20,27 @@ class ProductsController extends Controller
         ]);
     }
 
-    public function show ($id){
+    // public function show ($id){
+    //     $data = [
+    //         '01' => "iPhone",
+    //         '101' => "Xiome",
+    //         '09' => "Samsong",
+    //     ];
+    //     return view('products.index', [
+    //         'products' => $data[$id] ?? 'Product ' . $id . " dose not exist."
+    //     ]);
+    // }
+    
+    public function show ($name){
         $data = [
             '01' => "iPhone",
             '101' => "Xiome",
             '09' => "Samsong",
         ];
         return view('products.index', [
-            'products' => $data[$id] ?? 'Product ' . $id . " dose not exist."
+            'products' => $data[$name] ?? 'Product ' . $name . " dose not exist."
         ]);
     }
-    // public function show ($name){
-    //     $data = [
-    //         'iphone' => "iPhone",
-    //         'xiome' => "Xiome",
-    //         'samesong' => "Samsong",
-    //     ];
-    //     return view('products.index', [
-    //         'products' => $data[$name] ?? 'Product ' . $name . " dose not exist."
-    //     ]);
-    // }
 
     public function about(){
         return 'About Us Page';

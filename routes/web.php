@@ -21,7 +21,12 @@ Route::get('/', function () {
 Route::get('/products', [ProductsController::class, 'index']);
 
 //Pattern is integer
-Route::get('/products/{id}', 
-    [ProductsController::class, 'show'])->where('id', '[0-9]+');
+// Route::get('/products/{id}', 
+//     [ProductsController::class, 'show'])->where('id', '[0-9]+');
+
+//Pattern is string
+Route::get('products/{name}',
+    [ProductsController::class, 'show'])->where('name', '[a-zA-Z]+');
+
 Route::get('/products/about', [ProductsController::class, 'about']);
 Route::get('/products/about/back', [ProductsController::class, 'about_back']);

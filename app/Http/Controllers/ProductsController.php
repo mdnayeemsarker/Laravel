@@ -21,7 +21,12 @@ class ProductsController extends Controller
             'p3' => "Samsong",
         ];
 
-        return view('products.index')->with('data', $data);
+        // return view('products.index')->with('data', $data);
+
+        // Data parching Directly in view 
+        return view('products.index', [
+            'data' => $data
+        ]);
 
     }
     

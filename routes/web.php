@@ -40,3 +40,8 @@ Route::get('/users', function () {
         'email' => 'nayeemasha@gmail.com'
     ]);
 });
+
+// Route that sends function
+Route::get('/users', function () {
+    return redirect('/');
+});

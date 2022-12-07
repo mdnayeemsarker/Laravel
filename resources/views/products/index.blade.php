@@ -7,6 +7,6 @@
 </head>
 <body>
     <h1>This is our products page</h1>
-    <p>{{ $title }} <br> {{ $des }}</p>
+    <p>{{ $title }}</p>
 </body>
 </html>

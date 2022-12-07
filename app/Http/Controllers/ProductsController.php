@@ -9,7 +9,13 @@ class ProductsController extends Controller
     public function index(){
         $title = "Laravel Deep Learning Project";
         $des = "This is an Laravel deep learning program.";
-        return view('products.index', compact('title', 'des'));
+
+        //Compact methode
+        // return view('products.index', compact('title', 'des'));
+
+        // with methode
+        return view('products.index')->with('title', $title);
+
     }
     
     public function about(){

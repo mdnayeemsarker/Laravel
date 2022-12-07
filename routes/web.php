@@ -14,34 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
-});
-
-//Route that sends back a view
-Route::get('/docs', function () {
-    return view('frontend.item-details');
-});
-
-// Route that sends users - string
-Route::get('/users', function () {
-    return 'welcome to users page';
-});
-
-// Route that sends users Array
-Route::get('/users', function(){
-    return ['PHP', 'HTML', 'Laravel', 'css'];
-});
-
-
-// Route that sends Json Object
-Route::get('/users', function () {
-    return response()->json([
-        'name' => 'Nayeem',
-        'email' => 'nayeemasha@gmail.com'
-    ]);
-});
-
-// Route that sends function
-Route::get('/users', function () {
-    return redirect('/');
+    return view('home');
 });

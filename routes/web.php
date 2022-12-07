@@ -19,5 +19,5 @@ Route::get('/', function () {
 
 //Route
 Route::get('/docs', function () {
-    return view('frontend.docs');
+    return view('frontend.item-details');
 });

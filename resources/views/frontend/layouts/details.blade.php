@@ -18,7 +18,7 @@
             }
         </style>
     </head>
-    <body class="m-4">
+    <body class="m-4 content-wrapper">
         <div class="bg-gray-100 dark:bg-gray-900">
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
@@ -34,17 +34,21 @@
                 </div>
             @endif
 
-            <div class="m-4 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                <div class="row">
-                    <div class="m-4 col">
-                        @yield('doc')
-                    </div>
-                    <div class="m-4 col">
-                        @yield('user')
-                    </div>
+            <div class="row">
+                <div class="text-lg leading-7 m-2 font-semibold col">
+                    @yield('lpath')
+                </div>
+                <div class="text-lg leading-7 m-2 font-semibold col">
+                    @yield('rpath')
                 </div>
             </div>
+            <div class="m-4 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">                
+               
 
+                <div class="m-4">
+                    @yield('content')
+                </div>
+            </div>
         </div>
     </body>
 </html>

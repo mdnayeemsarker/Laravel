@@ -33,9 +33,9 @@ class ProductsController extends Controller
     
     public function show ($name){
         $data = [
-            '01' => "iPhone",
-            '101' => "Xiome",
-            '09' => "Samsong",
+            'iphone' => "iPhone",
+            'xiome' => "Xiome",
+            'samsong' => "Samsong",
         ];
         return view('products.index', [
             'products' => $data[$name] ?? 'Product ' . $name . " dose not exist."
